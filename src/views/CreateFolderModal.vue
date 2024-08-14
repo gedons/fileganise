@@ -34,12 +34,12 @@ export default {
     closeModal() {
       this.$emit('close');
     },
-    
+
     async createFolder() {
       this.isLoading = true;
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5000/api/folders', {
+        const response = await fetch('https://fileorganise.onrender.com/api/folders', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

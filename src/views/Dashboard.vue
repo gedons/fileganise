@@ -218,7 +218,7 @@
         async fetchFolders() {
           this.isFetching = true;
           try {
-            const response = await fetch('http://localhost:5000/api/folders', {
+            const response = await fetch('https://fileorganise.onrender.com/api/folders', {
               headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
               },
@@ -235,7 +235,7 @@
         async fetchFiles() {
           this.isFetching = true;
           try {
-            const response = await fetch('http://localhost:5000/api/files', {
+            const response = await fetch('https://fileorganise.onrender.com/api/files', {
               headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
               },
@@ -256,7 +256,7 @@
             if (confirm('Are you sure you want to delete this file?')) {
              const interval = this.startProgress();
             try {
-                const response = await fetch(`http://localhost:5000/api/files/${fileId}`, {
+                const response = await fetch(`https://fileorganise.onrender.com/api/files/${fileId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -288,7 +288,7 @@
             if (confirm('Are you sure you want to delete this folder?')) {
               const interval = this.startProgress();
                 try {
-                    const response = await fetch(`http://localhost:5000/api/folders/${folderId}`, {
+                    const response = await fetch(`https://fileorganise.onrender.com/api/folders/${folderId}`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -388,7 +388,7 @@
           const interval = this.startProgress(); 
 
           try {
-            const response = await fetch(`http://localhost:5000/api/files/${fileId}/move`, {
+            const response = await fetch(`https://fileorganise.onrender.com/api/files/${fileId}/move`, {
               method: 'PUT',
               headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,

@@ -79,7 +79,7 @@ export default {
 
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:5000/api/files/upload', {
+        const response = await fetch('https://fileorganise.onrender.com/api/files/upload', {
           method: 'POST',
           body: formData,
           headers: {
